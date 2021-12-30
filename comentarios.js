@@ -11,7 +11,7 @@
 // This is an in-line comment.
 //You can make a multi-line comment beginning with 
 
-/* and ending with */. //This is a multi-line comment:
+/* and ending with */ //This is a multi-line comment:
 
 /* This is a
 multi-line comment */
