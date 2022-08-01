@@ -1,0 +1,1 @@
+alert("Olá Mundo, sendo exibido de um arquivo javascript externo")

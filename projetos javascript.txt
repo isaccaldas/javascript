@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=Q1Ph7NbPuoc - jogo TREX javascript
+https://www.youtube.com/watch?v=7vPYvPXBq8w- gerador de senhas javascript
+https://www.youtube.com/watch?v=ohl1tK-azxw - jogo da velha javascript
+https://www.youtube.com/watch?v=6-Egmf_BlXg - Copiando Texto Para a Área de Transferência com JavaScript
+https://www.youtube.com/watch?v=JxtQJ8P0ekE - Criando CRUD Responsivo com JavaScript (Projeto de Cadastro)
+https://www.youtube.com/watch?v=a4SnD7PIM54 - Efeito de Digitação com JavaScript
+https://www.youtube.com/watch?v=lr90eFF7whI - Gerador de HTML para PDF com JavaScript (html2pdf)
+https://www.youtube.com/watch?v=RacwEvoTz_Y&list=PLDgemkIT111AzoS1rB61sgMJbsEA4pyD2 - calculadora IMC
+https://www.youtube.com/watch?v=EujFSEsZsk4&list=PLDgemkIT111AzoS1rB61sgMJbsEA4pyD2&index=4
