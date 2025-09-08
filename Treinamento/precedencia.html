@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <!--tag head é chamada antes do body>-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    
+    <script>
+        alert("Javascript sendo chamado internamente")
+    </script>
+
+    <!--Chamando o javascript de forma externa-->
+    <!--Erro de execução de precedencia. chama o elemento antes dele ser renderizado-->
+    <!-- <script src="teste.js"></script> -->
+
+
+</head>
+<body>
+    <!--Erro de execução de precedencia. chama o elemento antes dele ser renderizado-->
+    <!-- <script src="teste.js"></script> -->
+    <h1>Curso de Javascript</h1>
+    <input 
+        type="text" 
+        placeholder="teste de precedência"
+        id="nome"
+        disabled="disabled"
+    />
+    <!-- OK -->
+     <script src="teste.js"></script>
+</body>
+</html>
