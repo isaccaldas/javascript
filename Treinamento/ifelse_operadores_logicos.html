@@ -5,8 +5,11 @@
     <title>JavaScript</title>
     <script>
 
+      //E && -> Ambas as exepressões devem ser verdadeiras para ser verdadeira
+      //OR || -> Ao menos um das exepressões devem ser verdadeiras para ser verdadeira
+      //NOT ! -> inverte a expressão booleana
       //false = false
-      /*
+      /* 
       if(!(5 >= 2)) {
         document.write('Verdadeiro')
       } else {
@@ -19,14 +22,19 @@
 
       var media = 7
       var faltas_maximas = 15
+      var resultado= false
 
       if (nota >= media && faltas <= faltas_maximas) {
-        document.write('Aprovado')
-      
+        //document.write('Aprovado')
+        resultado = true
       } else { 
-        document.write('Reprovado')
-      
+        //document.write('Reprovado')
+        resultado = false
       }
+
+     // operador ternário = <condição> ? Verdadeiro : falso
+      document.write(resultado ? "Aprovado!" : "Reprovado!");
+
 
     </script>
   </head>
