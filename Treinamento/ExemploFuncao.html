@@ -11,13 +11,16 @@
 
         var area = largura * comprimento
 
-        return area
+        return area //retorno do valor calculado
         
      }// Fim da função
 
-     var resultado = calcularAreaTerreno(10,5)
+     var largura = prompt("Informe a laruga: ")
+     var comprimento = prompt("Informe o comprimento: ")
+    
+     var resultado = calcularAreaTerreno(largura,comprimento)
 
-     document.write(resultado)
+     document.write("A área total é " + resultado)
 
     </script>
   </head>
