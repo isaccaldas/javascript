@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript</title>
-    <script>
 
-     //Exemplo do uso de length. Indica a quantidade de caracteres da string
-        document.write("Ola. Essa é uma função anonima".length)
-   
-     
-    </script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+  <script>
 
-  <body>
-  </body>
+    var nome = "Ola. Essa é uma função anônima"
+    var nome2 = "     Ola. Essa é uma função anônima     "
+
+    //Exemplo do uso de length. Indica a quantidade de caracteres da string
+    document.write(nome.length + "</br>")
+
+    //Exemplo chaAt()
+    document.write(nome.charAt(2) + "</br>")
+
+    //Exemplo indeOf() - primeira ocorrencia que aparece o caracter
+    document.write(nome.indexOf("a") + "</br>")
+    document.write(nome.indexOf("x") + "</br>") // Quando não encontra devolve -1
+
+    //Exemplo replace() - substitui uma cadeia de caractere
+    document.write(nome.replace("Ola", "Oi") + "</br>")
+
+    //Exemplo subtr() - recorta uma cadeia de caractere. Nao exibe a ultima posição
+    document.write(nome.substr(6, 4) + "</br>")
+    document.write(nome.substr(0, 2) + "</br>")
+    document.write(nome.substr(0, 3) + "</br>")
+
+    //Exemplo toLowerCase - caixa baixa para todos os caracteres
+    document.write(nome.toLowerCase() + "</br>")
+
+    //Exemplo toUpperCase - caixa alta para todos os caracteres
+    document.write(nome.toUpperCase()+ "</br>")
+
+     //Exemplo trim() - remo os espaços e branco
+     document.write(nome.trim()+ "</br>")
+     document.write("-" + nome2 + "-" + "</br>")
+     document.write("-" + nome2.trim()+ "-" + "</br>")
+  </script>
+</head>
+
+<body>
+</body>
+
 </html>
