@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+
+
+        //Função de callback são parametros usados para chamar outras funções
+        function exibirArtigo(id, callbackSucesso, callbackErro) {
+
+            //logica para recuperar o id
+
+            if (true) {
+                callbackSucesso("Javascript", "descrição do artigo sobre JS")
+            } else {
+                callbackErro("Erro de busca dos dados")
+            }
+
+        } //Fim exibirArtigo
+
+
+        var callbackSucesso = function (titulo, artigo) {
+
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr />')
+            document.write('<p>' + artigo + '</p>')
+
+        }
+
+        var callbackErro = function (erro) {
+
+            document.write('<p><b>Erro: </b>' + erro + '</p>')
+
+        }
+
+        //chamando exibirArtigo
+        exibirArtigo(1, callbackSucesso, callbackErro)
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
