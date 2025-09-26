@@ -14,6 +14,25 @@
       //Retorna o ano
       document.write(`Ano atual: ${data.getFullYear()} </br>`);
 
+      document.write("</br>");
+      
+      //Apresentando a objeto com as informações completas
+      document.write(data.toString());
+      document.write("</br>");
+      //Adicionando um dia a data atual
+      data.setDate(data.getDate() + 1);
+      data.setMonth(data.getMonth() + 1);
+      //Apresentando a objeto com as informações completas
+      document.write(data.toString());
+      document.write("</br>");
+      data.setDate(data.getDate6() + 720);
+      //Apresentando a objeto com as informações completas
+      document.write(data.toString());
+      document.write("</br>");
+      
+      let data2 = new Date(2017, 0, 16 );
+      document.write(data2.toString());
+      
     </script>
   </head>
 
