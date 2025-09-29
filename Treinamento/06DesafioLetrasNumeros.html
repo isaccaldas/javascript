@@ -6,36 +6,30 @@
     <title>JavaScript</title>
     <script>
 
-        function distribuiCaracter(){
-            //recuperando o valor digitado
-            let entrada = document.getElementById("id_entrada").value
-            //alert(entrada)
-            //limpa o campo
-            document.getElementById("id_entrada").value = ""
+        function verificarEntrada() {
+            // recuperando o valor digitado
+            let entrada = document.getElementById("id_entrada").value;
 
-            //remove espaços das extremidades da string
-            entrada.trim();
+            // limpa o campo
+            document.getElementById("id_entrada").value = "";
 
-            //verificar se é letra ou número
-            switch(entrada){
-                case "0":
-                case "1":
-                case "2":
-                case "3":
-                case "4":
-                case "5":
-                case "6":    
-                case "7":
-                case "8":
-                case "9":{
-                    document.getElementById("id_numero").value = entrada
-                    break;}
-                default: {
-                    document.getElementById("id_letra").value = entrada
+            // remove espaços das extremidades da string
+            entrada = entrada.trim();
+
+            // verificar se é número ou letra
+            switch (true) {
+                case !isNaN(entrada) && entrada !== "": // é número. garante que não é vazio e que é número.
+                    document.getElementById("id_numero").value = entrada;
                     break;
-                }
-            }
 
+                case /^[a-zA-Z]+$/.test(entrada): // é letra. expressão regular para validar apenas letras.
+                    document.getElementById("id_letra").value = entrada;
+                    break;
+
+                default: // outro tipo de caractere ou vazio
+                    alert("Digite apenas letras ou números!");
+                    break;
+            }
         }
 
     </script>
@@ -43,14 +37,14 @@
 
 <body>
 
-    <input id="id_entrada" type="text" placeholder="Digite um caracter aqui" onkeyup="distribuiCaracter()"/>
-    
+    <input id="id_entrada" type="text" placeholder="Digite um caracter aqui" onkeyup="verificarEntrada()" />
+
     <br></br>
 
     <div>
-        <span>Letras:</span> <input id="id_letra" type="text" disabled/>
+        <span>Letras:</span> <input id="id_letra" type="text" disabled />
 
-        <span>Números:</span> <input id="id_numero" type="text" disabled/>
+        <span>Números:</span> <input id="id_numero" type="text" disabled />
     </div>
 
 </body>
