@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        // o background do elemento irá ficar amarelo quando a janela for redimensionada
+        function onResize() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "yellow";
+            //console.log("Evento Disparado");
+        }
+
+         // o background do elemento irá ficar azul quando um scroll do mouse for selecionado
+        function onscroll() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "blue";
+        }
+
+           
+    </script>
+</head>
+
+<body id="i1" onresize="onResize()" onscroll="onscroll()">
+
+    <div style="height: 3000px; width: 125px; background: #ccc;"></div>
+
+
+</body>
+
+</html>
