@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        // um click em cima do elemento
+        function onMouseclick() {
+            //alert('Quando clica uma vez Amarelou!')
+            let elemento = document.getElementById("square")
+            elemento.style.background = "yellow";
+        }
+
+        // dois clicks em cima do elemento
+        function onMouseDoubleclick() {
+            //alert('Quando clica duas vezes azulou!')
+            let elemento = document.getElementById("square2")
+            elemento.style.background = "blue";
+        }
+
+        // Quando solta o click do mouse em cima do elemento
+        function onMouseUp() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square3")
+            elemento.style.background = "red";
+        }
+
+        // Quando passa o mouse em cima do elemento
+        function onmouseOver() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square5")
+            elemento.style.background = "cyan";
+        }
+
+        // Quando passa o mouse em cima do elemento
+        function onmouseOver() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square6")
+            elemento.style.background = "cyan";
+        }
+
+         // Quando passa o mouse em cima do elemento
+         function onmouseOut() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square6")
+            elemento.style.background = "red";
+        }
+     
+        // Quando passa o mouse em cima do elemento
+        function onmouseOver2() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square7")
+            elemento.style.background = "cyan";
+        }
+
+         // Quando passa o mouse em cima do elemento
+         function onmouseOut2() {
+            //alert('Quando solta o click do mouse azulou!')
+            let elemento = document.getElementById("square7")
+            elemento.style.background = "rgb(141, 106, 238)";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <div id="square" onclick="onMouseclick()" ondblclick="onMouseDoubleclick()"
+            style="background: #ccc; height: 150px; width: 150px;"></div>
+
+        <div id="square2" ondblclick="onMouseDoubleclick()" style="background: #653535; height: 150px; width: 150px;"></div>
+        
+        <div id="square3" onmouseup="onMouseUp()" style="background: #cccccc; height: 150px; width: 150px;"></div>
+
+        <div id="square4" onmouseup="onMouseUp()" style="background: red; height: 150px; width: 150px;"></div>
+        
+        <div id="square5" onmouseover="onmouseOver()" style="background: green; height: 150px; width: 150px;"></div>
+
+        <div id="square6" onmouseout="onmouseOut()" style="background: rgb(64, 34, 148); height: 150px; width: 150px;"></div>
+
+        <div id="square7" onmouseover="onmouseOver2()" onmouseout="onmouseOut2()" style="background: rgb(141, 106, 238); height: 150px; width: 150px;"></div>
+    </div>
+
+</body>
+
+</html>
