@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        // o background do elemento irá ficar amarelo quando o elemento estiver em foco
+        function onFocus() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "yellow";
+            //console.log("Evento Disparado");
+        }
+
+         // o background do elemento irá ficar branco o elemento perder o foco
+        function onBlur() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "white";
+        }
+
+        function onChange() {
+            let elemento = document.getElementById("i2")
+            elemento.style.background = "green";
+        }
+
+           
+    </script>
+</head>
+
+<body>
+
+   <input id="i1" type="text" onfocus="onFocus()" onblur="onBlur()" />
+   <input id="i2" type="text" />
+
+   <select onchange="onChange()">
+        <option value="1">-- Selecione --</option>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+   </select>
+
+</body>
+
+</html>
