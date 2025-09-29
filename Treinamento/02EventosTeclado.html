@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        // o background do elemento irá ficar amarelo quando um tecla do teclado for pressionada
+        function onkeyDown() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "yellow";
+        }
+
+         // o background do elemento irá ficar branco quando um tecla do teclado deixar de ser for pressionada
+        function onkeyUp() {
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "white";
+        }
+
+        // o background do elemento irá ficar vermelhor quando um tecla do teclado de caracter for pressionada
+        function onkeyPress() {
+           
+            let elemento = document.getElementById("i1")
+            elemento.style.background = "red";
+        }
+
+       
+    </script>
+</head>
+
+<body>
+
+<input id="i1" type="text" onkeydown="onkeyDown()" onkeyup="onkeyUp()" onkeypress="onkeyPress()" />
+
+</body>
+
+</html>
