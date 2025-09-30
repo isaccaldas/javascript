@@ -13,7 +13,7 @@
     <input id="id_user2" style="background: green;" type="button" name="nome" value="Verde" onclick="corVerde()" />
     <input id="id_user3" style="background: blue;" type="button" name="nome" value="azul" onclick="corAzul()" />
     <input id="id_user4" style="background: rgb(0, 255, 162);" type="button" name="nome" value="Cores"
-        onclick="modificarEstilo('rgb(0, 255, 162)')" />
+        onclick="modificarEstilo('rgb(0, 255, 162)', '50px', '50px')" />
     <br></br>
     <div id="id_div" style="background: #887983; height: 150px; width: 150px; border: solid 1px;"></div>
 </body>
@@ -34,9 +34,11 @@
         elemento.style.background = "green";
     }
 
-    function modificarEstilo(cordeFundo) {
+    function modificarEstilo(cordeFundo, L, A) {
         document.getElementById("id_div").style.background = cordeFundo;
-
+        document.getElementById("id_div").style.height = A;
+        document.getElementById("id_div").style.width = L;
+        document.getElementById("id_div").style.border = "solid 3px";
     }
 
 </script>
