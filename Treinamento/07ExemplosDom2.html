@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <input id="id_user" style="background: red;" type="button" name="nome" value="Vermelho" onclick="corVermelha()" />
+    <input id="id_user2" style="background: green;" type="button" name="nome" value="Verde" onclick="corVerde()" />
+    <input id="id_user3" style="background: blue;" type="button" name="nome" value="azul" onclick="corAzul()" />
+    <input id="id_user4" style="background: rgb(0, 255, 162);" type="button" name="nome" value="Cores"
+        onclick="modificarEstilo('rgb(0, 255, 162)')" />
+    <br></br>
+    <div id="id_div" style="background: #887983; height: 150px; width: 150px; border: solid 1px;"></div>
+</body>
+<script>
+
+    function corVermelha() {
+        let elemento = document.getElementById("id_div")
+        elemento.style.background = "red";
+    }
+
+    function corAzul() {
+        let elemento = document.getElementById("id_div")
+        elemento.style.background = "blue";
+    }
+
+    function corVerde() {
+        let elemento = document.getElementById("id_div")
+        elemento.style.background = "green";
+    }
+
+    function modificarEstilo(cordeFundo) {
+        document.getElementById("id_div").style.background = cordeFundo;
+
+    }
+
+</script>
+
+</html>
