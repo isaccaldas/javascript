@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+        .estilo1{
+            background-color: red;
+            color: white;
+        }
+        .estilo2{
+            height: 400px;
+            width: 400px;
+            background-color: yellowgreen;
+            color: red;
+            text-align: center;
+            font-size: 25px;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="id_div" class="estilo1">Identificando Elementos</div>
+    <br></br>
+    <input id="id_user" type="button" name="nome" value="Aplicar Classe" onclick="modificarClasse()" />
+
+</body>
+<script>
+
+    function modificarClasse(){
+
+        document.getElementById("id_div").className = "estilo2"
+
+    }
+
+</script>
+
+</html>
