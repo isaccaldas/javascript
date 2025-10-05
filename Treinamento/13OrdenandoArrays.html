@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+        let lista_frutas = ['banana','maça', 'morango', 'uva']
+        let lista_frutas2 = ['uva', 'abacate', 'banana','maça','abacaxi', 'morango', 'uva']
+        let lista_numeros = [99,15,2,21,1,14,100]
+
+        document.write(lista_frutas + '<hr/>')
+        document.write(lista_frutas2 + '<hr/>')
+        document.write(lista_numeros+ '<hr/>')
+
+        //ordenando elementos usando o método sort (somente para alfanumericos)
+        let listaOrganizada = lista_frutas.sort() 
+        let listaOrganizada2 = lista_numeros.sort() //apresenta a lista ordenada de forma incorreta
+
+        //ordenando elementos usando o método
+        function ordenaNumeros(num1, num2){
+            return num1-num2
+            //< 0, num1 ordenado antes de num2
+            //> 0, num2 ordenado antes de num1 
+            //= 0, ordem mantida 
+        }
+
+        let listaOrganizada3 = lista_numeros.sort(ordenaNumeros)// usando callback
+        
+        document.write(listaOrganizada + '<hr/>')
+        document.write(lista_frutas2.sort() + '<hr/>')
+        document.write(listaOrganizada2 + '<hr/>')
+        document.write(listaOrganizada3 + '<hr/>')
+        
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
