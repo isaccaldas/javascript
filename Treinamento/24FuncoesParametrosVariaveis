@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+    function soma(){
+        resultado=0;
+        //console.log(arguments); //recupera os parametros da função
+        
+        for(var i in arguments){
+
+           //document.write(arguments[i]+ "<br>");//recupera os parametros da função
+           document.write(resultado + arguments[i]);
+
+        }
+    }
+
+    console.log(soma(7,5,2));
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
