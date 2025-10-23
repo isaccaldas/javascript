@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+        let janela;
+
+        function abrirPopup(){
+            janela = window.open("http://www.uol.com.br","novaJanela", "width=200", 
+            "height=200");
+        }
+
+        function fecharPopup(){
+            janela.close();
+        }
+
+    </script>
+</head>
+
+<body>
+ 
+    <button onclick="abrirPopup()">Abrir Janela</button>
+    <button onclick="fecharPopup()">Fechar Janela</button>
+
+</body>
