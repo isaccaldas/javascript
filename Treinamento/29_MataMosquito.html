@@ -6,9 +6,17 @@
     <title>Mata Mosquito</title>
 
     <style>
-        .tamanhoMosquito {
+        .mosquito1 {
             width: 50px;
             height: 50px;
+        }
+        .mosquito2 {
+            width: 100px;
+            height: 100px;
+        }
+        .mosquito3 {
+            width: 150px;
+            height: 150px;
         }
     </style>
 
@@ -30,8 +38,8 @@
 
         function posicaoRandomica() {
 
-            let posicaoX = Math.floor(Math.random() * largura) - 90; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
-            let posicaoY = Math.floor(Math.random() * altura)- 90; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            let posicaoX = Math.floor(Math.random() * largura) - 150; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            let posicaoY = Math.floor(Math.random() * altura)- 150; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
             
             //Para evitar que as posições fiquem negativas e a imagem sai da tela
             posicaoX = posicaoX < 0 ? 0 : posicaoX;
@@ -39,11 +47,23 @@
 
             let mosquito = document.createElement("img"); //cria um elemento html do tipo imagem
             mosquito.src = 'imagens/mosca.png'; //definido o src da imagem
-            mosquito.className = "tamanhoMosquito"; //aplicando a class css
+            mosquito.className =  tamanhoAleatorio(); //aplicando a class css
             mosquito.style.left = posicaoX + "px"; // posição eixo x
             mosquito.style.top = posicaoY + "px";  // posição eixo y
             mosquito.style.position = "absolute";
             document.body.appendChild(mosquito); //add o elemento criado dentro body
+
+            tamanhoAleatorio() //tamanho do mosquito
+        }
+
+        function tamanhoAleatorio(){
+            let tamanho = Math.floor(Math.random()*3);
+
+            switch(tamanho){
+                case 0: return "mosquito1";
+                case 1: return "mosquito2";
+                case 2: return "mosquito3";
+            }
         }
 
     </script>
