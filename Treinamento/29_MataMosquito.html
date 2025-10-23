@@ -3,13 +3,53 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript</title>
+    <title>Mata Mosquito</title>
+
+    <style>
+        .tamanhoMosquito {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
     <script>
 
-      
+        let altura = 0;
+        let largura = 0;
+
+
+        function ajustaTamanhoPalcoJogo() {
+
+            altura = window.innerHeight;
+            largura = window.innerWidth;
+            //console.log(altura,largura)
+     
+        }
+
+        ajustaTamanhoPalcoJogo();//chama a função para o programa saber os limites da janela.
+
+        function posicaoRandomica() {
+
+            let posicaoX = Math.floor(Math.random() * largura) - 90; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            let posicaoY = Math.floor(Math.random() * altura)- 90; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            
+            //Para evitar que as posições fiquem negativas e a imagem sai da tela
+            posicaoX = posicaoX < 0 ? 0 : posicaoX;
+            posicaoY = posicaoY < 0 ? 0 : posicaoY;
+
+            let mosquito = document.createElement("img"); //cria um elemento html do tipo imagem
+            mosquito.src = 'imagens/mosca.png'; //definido o src da imagem
+            mosquito.className = "tamanhoMosquito"; //aplicando a class css
+            mosquito.style.left = posicaoX + "px"; // posição eixo x
+            mosquito.style.top = posicaoY + "px";  // posição eixo y
+            mosquito.style.position = "absolute";
+            document.body.appendChild(mosquito); //add o elemento criado dentro body
+        }
+
     </script>
 </head>
 
-<body>
-  
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <script>posicaoRandomica()</script>
 </body>
