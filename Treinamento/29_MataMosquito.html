@@ -7,27 +7,27 @@
 
     <style>
         .mosquito1 {
-            width: 50px;
-            height: 50px;
+            width: 200px;
+            height:200px;
         }
 
         .mosquito2 {
-            width: 100px;
-            height: 100px;
+            width: 300px;
+            height: 300px;
         }
 
         .mosquito3 {
-            width: 150px;
-            height: 150px;
+            width: 400px;
+            height: 400px;
         }
 
-        .ladoEsquerdo{
-            transform: skewX(1);
-        }
-        .ladoDireito{
-            transform: skewX(-1);
+        .ladoEsquerdo {
+            transform: scaleX(1);
         }
 
+        .ladoDireito {
+            transform: scaleX(-1);
+        }
     </style>
 
     <script>
@@ -48,20 +48,29 @@
 
         function posicaoRandomica() {
 
-            let posicaoX = Math.floor(Math.random() * largura) - 150; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
-            let posicaoY = Math.floor(Math.random() * altura) - 150; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            //Remove o mosquito caso exista
+            if (document.getElementById("mosquito")) {
+                document.getElementById("mosquito").remove();
+            }
+
+            //declaração de variáveis
+            let posicaoX = Math.floor(Math.random() * largura) - 220; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            let posicaoY = Math.floor(Math.random() * altura) - 220; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
+            let mosquito = document.createElement("img"); //cria um elemento html do tipo imagem
 
             //Para evitar que as posições fiquem negativas e a imagem sai da tela
             posicaoX = posicaoX < 0 ? 0 : posicaoX;
             posicaoY = posicaoY < 0 ? 0 : posicaoY;
 
-            let mosquito = document.createElement("img"); //cria um elemento html do tipo imagem
+            //definindo atributos do mosquito
             mosquito.src = 'imagens/mosca.png'; //definido o src da imagem
-            mosquito.className = tamanhoAleatorio() + ladoAleatorio(); //aplicando a class css no tamanho e lado do mosquito.
+            mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio(); //aplicando a class css no tamanho e lado do mosquito.
             mosquito.style.left = posicaoX + "px"; // posição eixo x
             mosquito.style.top = posicaoY + "px";  // posição eixo y
-            mosquito.style.position = "absolute";
-            document.body.appendChild(mosquito); //add o elemento criado dentro body
+            mosquito.style.position = "absolute";  //para a posição funcionar
+            mosquito.id = "mosquito";                //identificador do mosquito
+
+            document.body.appendChild(mosquito);   //add o elemento criado dentro body
 
         }
 
@@ -77,10 +86,10 @@
 
         function ladoAleatorio() {
             let lado = Math.floor(Math.random() * 2);
-
-            switch (tamanho) {
+            console.log(lado)
+            switch (lado) {
                 case 0: return "ladoEsquerdo";
-                case 1: return "ladoDireito";               
+                case 1: return "ladoDireito";
             }
         }
 
@@ -89,5 +98,10 @@
 
 <body onresize="ajustaTamanhoPalcoJogo()">
 
-    <script>posicaoRandomica()</script>
+    <script>
+        setInterval(function(){ posicaoRandomica()}, 1000);
+
+        //posicaoRandomica()
+
+    </script>
 </body>
