@@ -12,10 +12,10 @@
             background-size: 100%;
         }
 
-        .painel{
+        .painel {
             position: absolute;
             width: 190px;
-            left:0px;
+            left: 0px;
             padding: 10px;
             bottom: 0px;
             border-top: solid 1px white;
@@ -23,11 +23,11 @@
             opacity: 0.7;
         }
 
-        .vidas{
-            float:left;
+        .vidas {
+            float: left;
         }
 
-        .cronometro{
+        .cronometro {
             float: left;
             font-size: 20px;
             font-weight: bold;
@@ -61,6 +61,7 @@
 
         let altura = 0;
         let largura = 0;
+        let vidas= 1;
 
 
         function ajustaTamanhoPalcoJogo() {
@@ -74,16 +75,25 @@
         ajustaTamanhoPalcoJogo();//chama a função para o programa saber os limites da janela.
 
         function posicaoRandomica() {
-
-            //Remove o mosquito caso exista
-            if (document.getElementById("mosquito")) {
-                document.getElementById("mosquito").remove();
-            }
-
             //declaração de variáveis
             let posicaoX = Math.floor(Math.random() * largura) - 220; //valor random ate a largura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
             let posicaoY = Math.floor(Math.random() * altura) - 220; //valor random ate a altura da tela, deixando o numero inteiro e -90 para evitar o estouro da tela
             let mosquito = document.createElement("img"); //cria um elemento html do tipo imagem
+            
+            //Remove o mosquito caso exista
+            if (document.getElementById("mosquito")) {
+                document.getElementById("mosquito").remove();
+
+                if(vidas>3){
+                    alert("Fim do Jogo! Você perdeu!!");
+                }else{
+                    console.log("v" + vidas)
+                    document.getElementById("v" + vidas).src = "imagens/coracao_vazio.png";
+                    vidas++;
+                }
+                
+               
+            }
 
             //Para evitar que as posições fiquem negativas e a imagem sai da tela
             posicaoX = posicaoX < 0 ? 0 : posicaoX;
@@ -96,6 +106,9 @@
             mosquito.style.top = posicaoY + "px";  // posição eixo y
             mosquito.style.position = "absolute";  //para a posição funcionar
             mosquito.id = "mosquito";                //identificador do mosquito
+            mosquito.onclick = function () {
+                this.remove();
+            } //remove o mosquito quando clicado
 
             document.body.appendChild(mosquito);   //add o elemento criado dentro body
 
@@ -113,7 +126,6 @@
 
         function ladoAleatorio() {
             let lado = Math.floor(Math.random() * 2);
-            console.log(lado)
             switch (lado) {
                 case 0: return "ladoEsquerdo";
                 case 1: return "ladoDireito";
@@ -134,8 +146,9 @@
 
     <div class="painel">
         <div class="vidas">
-            <img src="imagens\coracao_vazio.png">
-            <img src="imagens\coracao_cheio.png">
+            <img id="v1" src="imagens\coracao_cheio.png">
+            <img id="v2" src="imagens\coracao_cheio.png">
+            <img id="v3" src="imagens\coracao_cheio.png">
         </div>
         <div class="cronometro">
             Tempo restante: ?
