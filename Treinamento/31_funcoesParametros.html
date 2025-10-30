@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+    
+        function contarHistoria(personagem = "fuba", acao = "pulou muito", final = " descansaram muito"){
+            document.write(`Era uma vez ${personagem} quando ${acao}  e eles ${final}`);
+        }
+
+        contarHistoria("Isac", "dormiu muito", "e viveu feliz para sempre.")
+        contarHistoria(); //usando os parametros de valor default
+        contarHistoria(undefined, "dormiu muito", "e viveu feliz para sempre.") //usa o primeiro parametro como default
+    </script>
+</head>
+
+<body>
+   
+</body>
