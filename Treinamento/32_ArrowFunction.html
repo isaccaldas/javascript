@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+
+        let quadrado = function(x = 5){ return x*x;} //usando função anonima
+        
+        //document.write(quadrado); //exibe o que está associado a função
+        document.write(quadrado(2)+"<br>"); //usando a variável como função
+        document.write(quadrado()+"<br>");
+
+        //usando o arrow function
+        let quadrado2 = (x = 10) => {return x*x;}; //com um parametro não precisa do () ou {}, com mais de um sim
+        document.write(quadrado2(4)+"<br>");
+        document.write(quadrado2() +"<br>");
+
+        let par_impar = function(numero){
+            
+            
+            if(numero%2 == 0){
+                return "par"
+            }
+            else{
+                return "impar"
+            }
+        }
+
+        document.write(par_impar(8) +"<br>");
+
+        let par_impar2 = numero => {numero%2 == 0? "par":"impar"}
+        document.write(par_impar(10));
+
+    </script>
+</head>
+
+<body>
+   
+</body>
